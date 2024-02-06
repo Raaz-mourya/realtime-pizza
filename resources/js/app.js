@@ -44,10 +44,6 @@ if (alertMsg) {
   }, 2000);
 }
 
-// axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
-
-// Admin order status update
-initAdmin();
 
 // change order status
 let statuses = document.querySelectorAll(".status_line");
@@ -58,6 +54,11 @@ order = JSON.parse(order)
 let time = document.createElement('small')
 
 function updateStatus(order) {
+    statuses.forEach((status) => {
+        status.classList.remove('step-completed')
+        status.classList.remove('current')
+    })
+    
     let stepCompleted = true;
     statuses.forEach((status) => {
         let dataProp = status.dataset.status
@@ -77,3 +78,37 @@ function updateStatus(order) {
 }
 
 updateStatus(order);
+
+
+
+// Socket   (client side)
+
+let socket = io()
+
+// Admin order status update
+initAdmin(socket);
+
+
+// Join
+if (order) {
+    socket.emit('join',`order_${order._id}`)
+}
+
+let adminAreaPath = window.location.pathname
+console.log(adminAreaPath)
+if (adminAreaPath.includes('admin')) {
+    socket.emit('join', 'adminRoom')
+}
+
+socket.on('orderUpdated', (data) => {
+    const updatedOrder = { ...order }
+    updatedOrder.updatedAt = moment().format()
+    updatedOrder.status = data.status;
+    updateStatus(updatedOrder)
+    new Noty({
+      type: "success",
+      timeout: 1000,
+      progressBar: false,
+      text: "Order updated",
+    }).show();
+})
