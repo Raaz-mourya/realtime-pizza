@@ -25,6 +25,7 @@ function orderController() {
           Order.populate(
             result,
             { path: "customerId" },
+<<<<<<< HEAD
             async (err, placedOrder) => {
               if (paymentType === "card") {
                 // Stripe payment
@@ -73,6 +74,20 @@ function orderController() {
               }
             }
           );
+=======
+            (err, placedOrder) => {
+              req.flash("success", "Order placed successfully");
+              delete req.session.cart;
+              
+              // Emit
+              const eventEmitter = req.app.get("eventEmitter");
+              eventEmitter.emit("orderPlaced", placedOrder);
+
+              return res.redirect("/customer/orders");
+            }
+          );
+          
+>>>>>>> d2d357e31915e31d668ef7a46683f2a21d5647fd
         })
         .catch((err) => {
           return res.status(500).json({

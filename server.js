@@ -12,7 +12,10 @@ const flash = require("express-flash");
 const MongoDbStore = require("connect-mongo");
 const passport = require("passport");
 const Emitter = require("events");
+<<<<<<< HEAD
 
+=======
+>>>>>>> d2d357e31915e31d668ef7a46683f2a21d5647fd
 
 mongoose.set("strictQuery", false); // to hide special warning
 

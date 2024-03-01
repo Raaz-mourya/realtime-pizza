@@ -52,9 +52,13 @@
     "noty": "^3.2.0-beta-deprecated",
     "passport": "^0.7.0",
     "passport-local": "^1.0.0",
+<<<<<<< HEAD
     "path": "^0.12.7",
     "socket.io": "^4.7.4",
     "stripe": "^14.16.0"
+=======
+    "socket.io": "^4.7.4"
+>>>>>>> d2d357e31915e31d668ef7a46683f2a21d5647fd
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

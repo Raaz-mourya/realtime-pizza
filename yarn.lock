@@ -1906,11 +1906,14 @@
   resolved "https://registry.npmjs.org/@socket.io/component-emitter/-/component-emitter-3.1.0.tgz"
   integrity sha512-+9jVqKhRSpsc591z5vX+X5Yyw+he/HCB4iQ/RYxw35CEPaY1gnsNE43nf9n9AaYjAQrTiI/mOwKUKdUs9vf7Xg==
 
+<<<<<<< HEAD
 "@stripe/stripe-js@^3.0.2":
   version "3.0.2"
   resolved "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-3.0.2.tgz"
   integrity sha512-Ykr5mtTwbG+wleKQhtKOKyOfZ/0lRmwf49IBLi1vUxS/Mp9A0usiNFEkOh+kUGxEyD/lht+VgPTxPHbgUlqI+Q==
 
+=======
+>>>>>>> d2d357e31915e31d668ef7a46683f2a21d5647fd
 "@trysound/sax@0.2.0":
   version "0.2.0"
   resolved "https://registry.npmjs.org/@trysound/sax/-/sax-0.2.0.tgz"
@@ -2105,7 +2108,11 @@
   resolved "https://registry.npmjs.org/@types/minimatch/-/minimatch-3.0.5.tgz"
   integrity sha512-Klz949h02Gz2uZCMGwDUSDS1YBlTdDDgbWHi+81l29tQALUtvz4rAYi5uoVhE5Lagoq6DeqAUlbrHvW/mXDgdQ==
 
+<<<<<<< HEAD
 "@types/node@*", "@types/node@>=10.0.0", "@types/node@>=8.1.0":
+=======
+"@types/node@*", "@types/node@>=10.0.0":
+>>>>>>> d2d357e31915e31d668ef7a46683f2a21d5647fd
   version "20.11.16"
   resolved "https://registry.npmjs.org/@types/node/-/node-20.11.16.tgz"
   integrity sha512-gKb0enTmRCzXSSUJDq6/sPcqrfCv2mkkG6Jt/clpn5eiCbKTY+SgZUxo+p8ZKMof5dCp9vHQUAB7wOUTod22wQ==

@@ -113,7 +113,10 @@ export function initAdmin(socket) {
       text: "New order!",
       progressBar: false,
     }).show();
+<<<<<<< HEAD
     
+=======
+>>>>>>> d2d357e31915e31d668ef7a46683f2a21d5647fd
     orders.unshift(order);
     orderTableBody.innerHTML = "";
     orderTableBody.innerHTML = generateMarkup(orders);
